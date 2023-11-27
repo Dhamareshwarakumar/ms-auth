@@ -1,4 +1,6 @@
 dist/
 node_modules/
 logs/
+secrets/
 .env
+.DS_Store

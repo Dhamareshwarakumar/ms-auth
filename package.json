@@ -2,14 +2,14 @@
   "name": "ms-auth",
   "version": "1.0.0",
   "description": "Authentication Microservice",
-  "main": "dist/server.js",
+  "main": "dist/src/server.js",
   "scripts": {
     "prebuild": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "npx tsc",
     "prestart": "npm run build",
     "start": "node .",
     "dev": "nodemon .",
-    "serve": "pm2 start dist/server.js --name ms-auth --log logs/pm2.log --time",
+    "serve": "pm2 start dist/src/server.js --name ms-auth --log logs/pm2.log --time",
     "prod-install": "npm install --omit=dev"
   },
   "repository": {
@@ -41,7 +41,7 @@
     "typescript": "^5.3.2"
   },
   "engines": {
-    "node": "20.8.0",
-    "npm": "10.2.0"
+    "node": ">=20.8.0 <20.9.0",
+    "npm": ">=10.2.0 <10.3.0"
   }
 }
